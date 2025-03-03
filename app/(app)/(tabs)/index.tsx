@@ -21,6 +21,7 @@ import { useSession } from "@/ctx";
 import Story from "@/components/Story";
 import PostAction from "@/components/PostAction";
 import { ChnirtStyleSheet } from "@/utils/ChnirtStyleSheet";
+import TabSwitch from "@/components/TabSwitch";
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -75,16 +76,7 @@ export default function HomeScreen() {
         </View>
 
         {/* Tab Switch */}
-        <View style={styles.tabSwitchContainer}>
-          <View style={styles.tabSwitchInner}>
-            <TouchableOpacity style={styles.tabSwitchButtonActive}>
-              <Text style={styles.tabSwitchButtonActiveText}>Make Friends</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.tabSwitchButton}>
-              <Text style={styles.tabSwitchButtonText}>Search Partners</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
+        <TabSwitch />
 
         {/* Posts */}
         <View style={styles.postsContainer}>
